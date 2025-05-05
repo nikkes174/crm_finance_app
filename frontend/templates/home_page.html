@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Данилюк Екатерина - комерческий фотограф в Екатеринбурге</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+    <script src="/static/js/main.js"></script>
+  <!-- Навигация -->
+
+<nav class="navbar-wrapper">
+  <div class="navbar" id="navbar">
+    <div class="logo-block">
+      <div class="logo">
+        <img src="/static/content/DA.png" alt="DA Logo" />
+      </div>
+      <div class="logo">
+        <img src="/static/content/DA2.png" alt="DA Text Logo" />
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#" class="nav-link">ГЛАВНАЯ</a></li>
+      <li><a href="#" class="nav-link">ПОРТФОЛИО</a></li>
+      <li><a href="#" class="nav-link">ПРАЙС</a></li>
+      <li><a href="#" class="nav-link">ОБУЧЕНИЕ</a></li>
+      <li><a href="#" class="nav-link">БЛОГ</a></li>
+      <li><a href="#" class="nav-link">ОТЗЫВЫ</a></li>
+      <li><a href="#" class="nav-link">КОНТАКТЫ</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+  <!-- Видеофон -->
+  <header class="hero">
+    <video autoplay muted loop playsinline class="video-bg">
+      <source src="/static/content/IMG_0626.MOV" type="video/mp4" />
+      Ваш браузер не поддерживает видео.
+    </video>
+  </header>
+<!-- Блок заголовка с линией сверху -->
+<section class="intro">
+  <h1 class="main-title">Данилюк Екатерина - комерческий фотограф в Екатеринбурге</h1>
+</section>
+
+<!-- Первая линия -->
+<hr class="section-line" />
+
+<!-- Описание и фото -->
+<section class="about">
+  <div class="about-container">
+    <img src="/static/content/about_photo.jpg" alt="Фотограф" class="about-photo" />
+    <div class="about-text">
+      <p class="subtitle">Фотохудожник и преподаватель фотографии по образованию.<br>
+        Профессионально занимаюсь фотографией с 2006 года.</p>
+
+      <ul class="achievements">
+        <li>— Более <strong>1000</strong> успешных коммерческих фотосъёмок</li>
+        <li>— Более <strong>35</strong> офлайн мастер-классов в Москве, Минске, Краснодаре и других городах</li>
+        <li>— Более <strong>2000</strong> учеников онлайн и офлайн</li>
+      </ul>
+
+      <a href="#" class="btn">📷 ЗАКАЗАТЬ СЪЕМКУ</a>
+
+    </div>
+  </div>
+</section>
+  <hr class="section-line" />
+
+<!-- Вторая линия -->
+<hr class="section-line" />
+
+<!-- Блок с портфолию -->
+<section class="intro">
+  <h1 class="main-title">Портфолио</h1>
+</section>
+<hr class="section-line" />
+<!-- Блок с переходом на обучение, отзыввы и контакты  -->
+<section class="navigation-links">
+  <div class="nav-block">
+    <h2>Отзывы</h2>
+    <a href="/reviews" class="nav-button">
+      Перейти <span class="arrow">→</span>
+    </a>
+  </div>
+  <div class="nav-block">
+    <h2>Обучение</h2>
+    <a href="/education" class="nav-button">
+      Перейти <span class="arrow">→</span>
+    </a>
+  </div>
+  <div class="nav-block">
+    <h2>Контакты</h2>
+    <a href="/contacts" class="nav-button">
+      Перейти <span class="arrow">→</span>
+    </a>
+  </div>
+</section>
+<hr class="section-line" />
+<section class="intro">
+  <h1 class="main-title">Прайс</h1>
+</section>
+<hr class="section-line" />
+{% include "footer.html" %}
+</body>
+</html>

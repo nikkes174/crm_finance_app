@@ -1,0 +1,427 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+.main-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+}
+/* Класс для кнопок верхней панели */
+.nav-link {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 0;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
+.subtitle,
+.about-text,
+.achievements {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+body, html {
+  height: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: black;
+}
+
+/* Навбар */
+.navbar {
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;;
+  align-items: center;
+  padding: 0.5em 3em 0.5em 2em;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-wrapper {
+  background: black; /* ← теперь фон у внешней обёртки */
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-inner {
+  max-width: 800px; /* 🔧 Меняй как хочешь: 800px, 700px */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5em;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: opacity 0.3s ease;
+}
+
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 0.6em; /* расстояние между картинками */
+}
+
+.logo img {
+  height: 70px; /* или 50px, как тебе нужно */
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  transition: all 2s ease; /*расстояние между кнопками*/
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+   font-size: 14px; /* размер текста */
+  transition: 0.3s ease;
+  padding: 0.3em 0; /* вертикальные отступы */
+}
+
+.navbar.scrolled .logo {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.navbar.scrolled {
+  justify-content: center;
+}
+
+.navbar.scrolled .nav-links {
+  gap: 2em;
+}
+
+.nav-links li a:hover {
+  color: #ffffff;
+}
+
+/* Видеофон */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-photo {
+  width: 100%;
+  max-width: 320px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.nav-button {
+  position: relative;
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+.nav-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.nav-button:hover::after {
+  width: 100%;
+}
+
+.nav-button:hover {
+  color: #ffffff;
+}
+
+/* поле для видео */
+.hero {
+  position: relative;
+  height: 90vh; /* было 100vh */
+  width: 100%;
+  overflow: hidden;
+}
+.video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about {
+  background-color: black;
+  color: white;
+  padding: 100px 20px 80px; /* отступ сверху, чтобы не налезло на фиксированное меню */
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-photo {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text h2 {
+  font-size: 24px;
+  margin-bottom: 1em;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 1em;
+  line-height: 1.6;
+}
+
+.achievements {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5em;
+}
+
+.achievements li {
+  margin-bottom: 0.5em;
+}
+
+/* Кнопка */
+.btn {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 0.8em 1.5em;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.intro-content {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.intro-content h1 {
+  font-size: 24px;
+  font-weight: 200;
+  margin: 30px 0;
+  color: white;
+}
+
+.intro-content hr {
+  border: none;
+  border-top: 1px solid #444;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.intro {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 60px 20px 20px;
+}
+
+.main-title {
+  font-size: 30px;
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+.line-top,
+.line-bottom {
+  border: none;
+  border-top: 1px solid #444;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Линия после кнопки — отступ сверху */
+.line-bottom {
+  margin-top: 40px;
+}
+
+/* Описание */
+.about {
+  background-color: black;
+  color: white;
+  padding: 40px 20px 80px;
+}
+
+.section-line,
+.line-top,
+.line-bottom {
+  border: none;
+  border-top: 0.5px solid #555; /* тоньше и мягче */
+  width: 90%; /* или 50%, если хочешь чуть длиннее */
+  margin: 30px auto;
+}
+
+.navigation-links {
+  display: flex;
+  justify-content: center;
+  gap: 25rem; /* расстояние между блоками */
+  padding: 60px 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  flex-wrap: nowrap; /* 🔑 не переносить на новую строку */
+}
+
+.nav-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 150px;
+}
+
+.nav-block h2 {
+  font-size: 26px;
+  margin-bottom: 1em;
+  font-family: 'Exo 2 Light', sans-serif;
+  font-weight: 300;
+}
+
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  border: 1px solid white;
+  padding: 0.6em 1.2em;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.nav-button:hover {
+  background-color: white;
+  color: black;
+}
+
+.arrow {
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+}
+
+.nav-button:hover .arrow {
+  transform: translateX(5px);
+}
+
+.site-footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+
+
+.footer-icons a {
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.footer-icons a:hover {
+  transform: scale(1.2);
+}
+
+.footer-text p {
+  margin: 6px 0;
+}
+
+.footer-disclaimer {
+  font-size: 12px;
+  color: #aaa;
+}
